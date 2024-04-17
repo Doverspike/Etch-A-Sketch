@@ -1,0 +1,81 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+.sketchMain {
+    display: flex;
+    background-color: #d00120;
+    border-radius: 25px;
+    width: 1000px;
+    height: 750px;
+    border: 3px;
+    border-style: solid;
+    border-color: black;
+    flex-direction: column;
+    
+    
+    
+
+}
+
+.sketchBox {
+    display: flex;
+    align-self: center;
+    background-color: white;
+    width: 900px;
+    height: 600px;
+    margin-bottom: 25px;
+    border-radius: 25px;
+    border: 2px;
+    border-style: solid;
+    border-color: black;
+}
+.gridBox {
+    display: flex;
+    flex-wrap: wrap;
+    height: 100%;
+    width: 100%;
+    
+    
+}
+.gridItem {
+    
+    flex: 0 0 1;
+    
+}
+
+.sketchName {
+    display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+  font-size: 40px;
+}
+
+.sketchNobs {
+    display: flex;
+    background-color: #e2e2ee;
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    border-style: outset;
+    border-color: #f2f1f6;
+}
+
+.nobsBox {
+    display: flex;
+    flex-direction: row;
+    align-self: flex-end;
+    justify-content: space-between;
+    width: 1000px;
+}
+
+.left {
+    display: flex;
+    justify-content: flex-start;
+}
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+
