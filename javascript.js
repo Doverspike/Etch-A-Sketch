@@ -1,7 +1,7 @@
-const div16 = document.getElementById("16");
-const div32 = document.getElementById("32");
-const div64 = document.getElementById("64");
-const div100 = document.getElementById("100");
+const div16 = document.getElementById("id16");
+const div32 = document.getElementById("id32");
+const div64 = document.getElementById("id64");
+const div100 = document.getElementById("id100");
 const gridBox = document.getElementById("gridBox");
 const sketchBox = document.getElementById("sketchBox");
 const userChoice = document.getElementById("choice");
@@ -35,27 +35,37 @@ function createDiv(divSize, color) {
     for (i = 0; i < size; i++) {
         let div = document.createElement("div");
         div.classList.add("gridItem");
+        div.id = i;
         div.style.width = boxWidth
         div.style.height = boxHeight
         
         div.addEventListener("mouseover", () => (
-            backgroundColor(div)));
-            
-            
-
-        
+            backgroundColor(div, i)));
+           
         sketchBox.appendChild(div);
     }
 };
 
-function backgroundColor(div) {
+function backgroundColor(div, i) {
+    let pixel = div;
     if (colorChoice == "random") {
-    div.style.backgroundColor = randomColor();
-    } else {
-        div.style.backgroundColor = "black";
+    pixel.style.backgroundColor = randomColor();
+    } else {      
+        pixel.style.backgroundColor = "black";
+        
+        
+        pixel.style.opacity = increaseOpacity(pixel.style.opacity);
+        
     }
 }
-
+function increaseOpacity(opacity) {
+    let opac = opacity;
+    opac = Number(opac);
+    
+    opac += 0.1;
+    return opac;
+    
+}
 function getWidth(sizeInput) {
     return (900 / sizeInput) + "px"
 };
